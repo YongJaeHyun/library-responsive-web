@@ -16,9 +16,7 @@ const Icon = styled.span`
     `}
 `;
 
-const Button = styled.button`
-  position: relative;
-`;
+const Button = styled.button``;
 
 const IconBtn = (props) => {
   return (
