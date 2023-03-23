@@ -46,26 +46,24 @@ const Dropdown = (props) => {
       <DropdownTitle>
         <DropdownTitleLink to={nation}>{title}</DropdownTitleLink>
       </DropdownTitle>
-      {nation !== "/" && (
-        <NavContainer>
-          <NavUl>
-            {title === "국내 만화" &&
-              krGenres.map((genre) => (
-                <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
-              ))}
+      <NavContainer>
+        <NavUl>
+          {title === "국내 만화" &&
+            krGenres.map((genre) => (
+              <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
+            ))}
 
-            {title === "일본 만화" &&
-              jpGenres.map((genre) => (
-                <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
-              ))}
+          {title === "일본 만화" &&
+            jpGenres.map((genre) => (
+              <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
+            ))}
 
-            {title === "미국 만화" &&
-              usGenres.map((genre) => (
-                <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
-              ))}
-          </NavUl>
-        </NavContainer>
-      )}
+          {title === "미국 만화" &&
+            usGenres.map((genre) => (
+              <DropdownItem key={genre} title={genre} to={`${nation}/${genre}`} />
+            ))}
+        </NavUl>
+      </NavContainer>
     </Li>
   );
 };
