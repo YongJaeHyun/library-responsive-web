@@ -11,12 +11,6 @@ import SearchByMenuBar from "./pages/SearchByMenuBar";
 import SearchBySearchBar from "./pages/SearchBySearchBar";
 import UpdateBook from "./pages/UpdateBook";
 
-const Container = styled.div`
-  width: 80vw;
-  height: 100%;
-  margin: 0 auto;
-`;
-
 const MainContainer = styled.main`
   width: 70vw;
   height: 100%;
@@ -32,11 +26,9 @@ const Router = () => {
             <Header />
             <SearchBar />
             <MenuBar />
-            <Container>
-              <MainContainer>
-                <Outlet />
-              </MainContainer>
-            </Container>
+            <MainContainer>
+              <Outlet />
+            </MainContainer>
             <Footer />
           </>
         }
